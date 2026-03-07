@@ -1,0 +1,8 @@
+vendor/ node_modules/
+# OS un editor files
+.DS_Store Thumbs.db *.log *.swp *.sublime-workspace *.sublime-project 
+.idea/ .vscode/
+# PHP / CodeIgniter
+.env writable/cache/ writable/logs/ writable/session/
+# Docker
+docker-compose.override.yml

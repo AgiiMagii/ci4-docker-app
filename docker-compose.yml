@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    container_name: ci_app
+    ports:
+      - "8085:80"
+    volumes:
+      - ./app:/var/www/codeigniter_app
+      - ./database:/var/www/codeigniter_app/database
+      - ./images:/var/www/codeigniter_app/images
+    working_dir: /var/www/codeigniter_app
