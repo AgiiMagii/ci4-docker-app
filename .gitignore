@@ -1,8 +1,32 @@
-vendor/ node_modules/
-# OS un editor files
-.DS_Store Thumbs.db *.log *.swp *.sublime-workspace *.sublime-project 
-.idea/ .vscode/
-# PHP / CodeIgniter
-.env writable/cache/ writable/logs/ writable/session/
-# Docker
+# Composer dependencies
+/vendor/
+
+# Node dependencies (if ever used)
+/node_modules/
+
+# Environment config
+.env
+
+# CodeIgniter runtime files
+writable/cache/*
+writable/logs/*
+writable/session/*
+writable/uploads/*
+!writable/index.html
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE folders
+.vscode/
+.idea/
+*.swp
+*.sublime-workspace
+*.sublime-project
+
+# Docker overrides (local only)
 docker-compose.override.yml
