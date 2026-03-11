@@ -16,8 +16,8 @@ Sākums
 
 <div class="container mt-4">
 
-    <h1>Laipni lūgti ballīšu zonā!</h1>
-    <p>Atklājiet labākās ballīšu telpas pilsētā un rezervējiet savu nākamo neaizmirstamo pasākumu ar mums.</p>
+    <h1>Laipni lūgti telpu zonā!</h1>
+    <p>Atklājiet labākās telpas pilsētā un rezervējiet savu nākamo neaizmirstamo pasākumu ar mums.</p>
 
     <!-- Carousel -->
     <div id="carouselExample" class="carousel slide">

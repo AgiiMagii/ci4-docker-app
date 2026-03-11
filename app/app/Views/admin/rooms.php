@@ -22,6 +22,8 @@
 
                     <td>
                         <form method="post" action="<?= site_url('rooms/update/' . $room['roomID']) ?>" enctype="multipart/form-data">
+                            
+                            <?= csrf_field() ?>
                             <input type="text" name="Name" value="<?= esc($room['Name']) ?>" class="form-control">
                     </td>
 

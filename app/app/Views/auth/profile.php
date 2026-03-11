@@ -60,6 +60,7 @@
                     <h3>Personīgais info</h3>
 
                     <form method="post" action="<?= site_url('auth/update') ?>">
+                        <?= csrf_field() ?>
 
                         <div class="mb-3">
                             <label class="form-label">Vārds</label>

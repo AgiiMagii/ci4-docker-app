@@ -23,7 +23,7 @@
           <?php if (session()->get('logged_in')): ?>
             Sveiki, <?= esc(session()->get('fullName')) ?>
           <?php else: ?>
-            Party Zone
+            Room Zone
           <?php endif; ?>
         </a>
         <ul class="nav-links">
@@ -51,7 +51,7 @@
     </main>
 
     <footer>
-      <p>&copy; <?= date('Y') ?> Party Zone. All rights reserved.</p>
+      <p>&copy; <?= date('Y') ?> Room Zone. All rights reserved.</p>
     </footer>
   </div>
   <?= $this->renderSection('scripts') ?>

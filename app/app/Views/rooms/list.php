@@ -31,7 +31,6 @@ Pasākumu telpas
 
                 <div class="venue-header" onclick="toggleAccordion(this)">
                     <h2><?= esc($room['Name']) ?></h2>
-                    <p><?= esc($room['Description']) ?></p>
                     <p class="venue-address"><?= esc($room['Description']) ?></p>
 
                     <p class="venue-capacity">
