@@ -45,8 +45,7 @@ header {
 }
 main {
     flex: 1;
-    margin: 20px;
-    padding: 0;
+    padding: 20px;
 }
 footer {
     background-color: #333;

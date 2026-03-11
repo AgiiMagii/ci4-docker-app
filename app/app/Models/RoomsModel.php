@@ -9,7 +9,24 @@ class RoomsModel extends Model
 {
     protected $table = 'Rooms';
     protected $primaryKey = 'roomID';
-    protected $allowedFields = ['Name', 'Description', 'Capacity'];
+    protected $useAutoIncrement = true;
+
+    // Return type: array or entity
+    protected $returnType       = 'array';
+    protected $useSoftDeletes   = false;
+    // Allowed fields
+    protected $allowedFields = ['Name', 'Description', 'Capacity', 'Picture'];
+    // Dates
+    protected $useTimestamps = false;
+    protected $dateFormat    = 'datetime';
+    protected $createdField  = '';
+    protected $updatedField  = '';
+    protected $deletedField  = '';
+
+    // Validation
+    protected $validationRules      = [];
+    protected $validationMessages   = [];
+    protected $skipValidation       = false;
 
     public function getAllRooms()
     {
@@ -30,5 +47,15 @@ class RoomsModel extends Model
             $builder->where('Capacity >=', $criteria['Capacity']);
         }
         return $builder->get()->getResultArray();
+    }
+
+    public function updateRoom($id, $data)
+    {
+        $this->update($id, $data);
+    }
+
+    public function deleteRoom($id)
+    {
+        $this->delete($id);
     }
 }

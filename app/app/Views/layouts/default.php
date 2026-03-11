@@ -29,7 +29,7 @@
         <ul class="nav-links">
           <li><a href="<?= base_url('/') ?>">Sākums</a></li>
           <li><a href="<?= base_url('rooms/list') ?>">Telpas</a></li>
-          <li><a href="<?= base_url('book') ?>">Rezervēt</a></li>
+          <li><a href="<?= base_url('themes') ?>">Tematiskie pasākumi</a></li>
           <li><a href="<?= base_url('contact') ?>">Kontakti</a></li>
           <?php if (session()->get('logged_in')): ?>
             <!-- Lietotājs ir ielogojies -->

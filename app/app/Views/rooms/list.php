@@ -33,6 +33,9 @@ Pasākumu telpas
         <h2><?= esc($room['Name']) ?></h2>
         <p><?= esc($room['Description']) ?></p>
         <p><strong>Maksimālais personu skaits:</strong> <?= esc($room['Capacity']) ?></p>
+        <?php if ($room['Picture']): ?>
+            <img src="<?= base_url($room['Picture']) ?>" style="max-width:100%; height:auto; margin-top:10px;">
+        <?php endif; ?>
     </div>
 
     <div class="venue-accordion">
