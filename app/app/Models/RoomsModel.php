@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use CodeIgniter\Model;
-use DateTime;
 
 class RoomsModel extends Model
 {

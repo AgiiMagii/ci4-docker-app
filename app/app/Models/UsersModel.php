@@ -47,10 +47,10 @@ class UsersModel extends Model
                 'userID'    => $user['userID'],
                 'fullName'  => $user['Name'] . ' ' . $user['Surname'],
                 'email'     => $user['Email'],
-                'role'      => $user['Role'],
+                'role'      => $user['Role'],   // šeit tieši 'admin' vai 'customer'
                 'logged_in' => true
             ]);
-            return true;
+            return $user; // atgriež lietotāja masīvu, ne tikai true
         }
 
         return false;

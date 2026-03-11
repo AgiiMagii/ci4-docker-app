@@ -22,12 +22,13 @@ class Auth extends BaseController
         $password = $this->request->getPost('password');
 
         $usersModel = new \App\Models\UsersModel();
-        if ($usersModel->login($email, $password)) {
-            // login veiksmīgs, var novirzīt uz profila vai home
+        $user = $usersModel->login($email, $password);
+
+        if ($user) {
+            // Sesija jau iestatīta UserModel login() metodē
             return redirect()->to('/')->with('success', 'Veiksmīgi pieteicies');
         }
 
-        // login neizdevās, atpakaļ uz login ar error
         return redirect()->back()->with('error', 'Nepareizs e-pasts vai parole');
     }
 
@@ -65,6 +66,9 @@ class Auth extends BaseController
     {
         $session = session();
         $userId = $session->get('userID');
+        if (! $userId) {
+            return redirect()->to('/auth/login');
+        }
         $usersModel = new \App\Models\UsersModel();
         $user = $usersModel->getUserById($userId);
         return view('auth/profile', ['user' => $user]);

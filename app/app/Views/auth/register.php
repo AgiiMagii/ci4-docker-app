@@ -17,6 +17,7 @@
         <?php endif; ?>
 
         <form method="post" action="<?= base_url('auth/register') ?>">
+            <?= csrf_field() ?>
             <div class="mb-3">
                 <label class="form-label">Vārds</label>
                 <input
